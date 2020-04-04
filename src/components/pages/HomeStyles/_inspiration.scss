@@ -1,0 +1,44 @@
+.inspiration{
+    flex-direction: column;
+    padding-top: 4rem;
+
+    .inpiration-link{
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        
+        svg{
+            font-size: 1.5rem;
+            color: $braun;
+            padding: 0.5rem;
+        }
+    }
+
+    .inpiration-link:last-child{
+        align-self: flex-end;
+    }
+    
+
+    .editors-gallery{
+        column-count: 3;
+        column-gap: 0.5rem;
+
+        div{
+            margin-bottom: 0.5rem;
+
+            img{
+                position: relative;
+                width: 100%;
+            }
+        }
+
+        div:first-child{
+            margin-top: 0;
+        }
+
+        div:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

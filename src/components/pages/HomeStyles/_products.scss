@@ -1,0 +1,114 @@
+.products{
+    flex-direction: column;
+
+    .products-wrap{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 6rem;
+
+        .product{
+            position: relative;
+    
+            .border{
+                border: 1px solid $braun;
+    
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                bottom: 1rem;
+                right: 1rem;
+            }
+    
+            .header{
+                position: absolute;
+                background-color: white;
+                box-shadow: 0 0 5px 1rem white;
+                z-index: 1;
+                
+                h3{
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    margin-top: 0;
+                    margin-bottom: 1rem;
+                }
+    
+                div{
+                    font-size: 1.5rem;
+    
+                    svg{
+                        color: $braun;
+                    }
+                }
+            }
+        }
+
+        .allCollections{
+            width: 30%;
+            margin: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.5rem;
+            color: white;
+            background-color: #b18f7280;
+    
+            img{
+                z-index: -1;
+            }
+    
+            span:last-child{
+                font-weight: 600;
+            }
+        }
+
+        .someLinks{
+            width: 40%;
+            min-height: 20rem;
+            padding: 1rem;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            >div{
+                width: 80%;
+                height: 50%;
+                display: flex;
+    
+                >div{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.5rem;
+                    width: 50%;
+                }
+            }
+    
+            div:last-child{
+                margin-top: 1rem;
+                flex-direction: row-reverse;
+                div:first-child{
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+            }
+        }
+
+        .product-0{
+            width: 60%;
+
+            .img{
+                position: relative;
+                border: 1px solid red;
+
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

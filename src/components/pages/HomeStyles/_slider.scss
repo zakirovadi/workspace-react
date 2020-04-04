@@ -1,0 +1,84 @@
+.slider{
+    position: relative;
+    width: 100%;
+
+    .pag-left,
+    .pag-right{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $braun;
+        font-size: 2rem;
+    }
+
+    .pag-left{
+        left: -10%;
+    }
+
+    .pag-right{
+        right: -10%;
+    }
+
+    #slider{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        >div{
+            width: 32%;
+
+            .slider-relative{
+                position: relative;
+                width: 100%;
+                padding-bottom: 150%;
+
+                .slider-absolute{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    box-sizing: border-box;
+                }
+
+                .slider-img{
+                    height: 75%;
+
+                    border-top-left-radius: 7px;
+                    border-top-right-radius: 7px;
+                }
+
+                .slider-text{
+                    height: 25%;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: center;
+                    padding: 5% 10% 20%;
+
+                    border-left: 1px solid $braun;
+                    border-right: 1px solid $braun;
+                    border-bottom: 1px solid $braun;
+
+                    border-bottom-left-radius: 7px;
+                    border-bottom-right-radius: 7px;
+    
+                    span:first-child{
+                        color: $gray;
+                        text-transform: uppercase;
+                        margin-bottom: 1rem;
+                    }
+    
+                    span:last-child{
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
