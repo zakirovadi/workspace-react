@@ -180,7 +180,8 @@
         }
 
         @media(max-width: 600px){
-            >div{
+            >div,
+            >a{
                 width: 100% !important;
             }
 

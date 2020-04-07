@@ -9,7 +9,7 @@ $light-gray: #f4f4f4;
 
 
 body{
-  margin: 4rem 0 0;
+  margin: 96px 0 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   color: $dark-gray;
@@ -45,6 +45,11 @@ input:active, input:hover, input:focus, input{
 
 input::placeholder { 
   opacity: 1;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 .rounded{

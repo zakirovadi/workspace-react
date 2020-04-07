@@ -2,16 +2,16 @@ import React from 'react';
 import './HomeStyles/Home.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faSearch, faBookmark, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
+import {Link} from 'react-router-dom';
 
 function RenderCollection(props) {
     if(props.index === 0){
         return (
-            <div className="allCollections rounded img-center">
+            <Link to="/collections" className="allCollections rounded img-center">
                 <img src="/images/inspiration/7.jpg" alt="all collections"></img>
                 <span>GET ALL COLLECTIONS</span>
                 <span>SHOP NOW</span>
-            </div>
+            </Link>
         )
     }else if(props.index === 2){
         return (

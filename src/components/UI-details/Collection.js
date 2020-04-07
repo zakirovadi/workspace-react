@@ -1,9 +1,10 @@
 import React from 'react';
+import './Collection.scss';
 
-function Collections(props) {
+function Collection(props) {
     return(
         <div>All Collections</div>
     );
 }
 
-export default Collections;
+export default Collection;

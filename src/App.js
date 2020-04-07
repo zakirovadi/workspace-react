@@ -4,7 +4,6 @@ import Footer from './components/UI-details/Footer';
 import Home from './components/pages/Home';
 import Inspiration from './components/pages/Inspirations';
 import Collections from './components/pages/Collections';
-import SectionProducts from './components/pages/SectionProducts';
 
 import './App.scss';
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -39,7 +38,6 @@ class App extends Component {
           <Route path='/home' component={this.HomePage} />
           <Route exact path='/inspiration' component={Inspiration} />
           <Route exact path='/collections' component={Collections} />
-          <Route exact path='/sectionproducts' component={SectionProducts} />
           <Redirect to="/home" />
         </Switch>
         <Footer />
