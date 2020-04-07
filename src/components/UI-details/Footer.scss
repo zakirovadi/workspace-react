@@ -13,24 +13,30 @@ $light-gray: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: 1rem;
+
+    @media (min-width: 1800px){
+        font-size: 1.5rem;
+    }
   
     span{
-        padding: 1rem;
+        padding: 1em;
         font-weight: 300;
         text-align: center;
     }
   
     .email{
         color: white;
-        font-size: 1.2rem;
+        font-size: 1.2em;
         min-width: 20%;
         max-width: 90%;
-        width: 10rem;
+        width: 10em;
         border-bottom: 1px solid white;
     }
   
     input::placeholder {
-        font-size: 1.2rem; 
+        font-size: 1.2em; 
         color: white;
     }
   }
@@ -43,7 +49,15 @@ footer{
     align-items: center;
     box-sizing: border-box;
 
-    padding: 4rem 10%;
+    padding: 4em 10%;
+
+    font-size: 0.8rem;
+    @media (min-width: 1000px){
+        font-size: 1rem;
+    }    
+    @media (min-width: 1800px){
+        font-size: 1.5rem;
+    }
 
     ul{
         list-style: none;
@@ -52,7 +66,7 @@ footer{
         display: flex;
 
         li{
-            margin: 1rem;
+            margin: 1em;
         }
     }
 
@@ -66,7 +80,7 @@ footer{
         flex-direction: column;
 
         .email{
-            margin-bottom: 1rem;
+            margin-bottom: 1em;
         }
     }
 
@@ -75,7 +89,7 @@ footer{
         flex-direction: column;
 
         .footer-menu{
-            margin: 2rem auto;
+            margin: 2em auto;
         }
     }
 }
