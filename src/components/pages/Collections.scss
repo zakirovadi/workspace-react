@@ -1,0 +1,12 @@
+$gray: #c5c6ca;
+
+.collections{
+    flex-direction: column;
+    align-items: stretch;
+
+    .hr-line{
+        width: 100%;
+        height: 1px;
+        background-color: $gray;
+    }
+}
