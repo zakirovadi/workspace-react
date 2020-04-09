@@ -1,0 +1,77 @@
+// colors
+$braun: #b18e70;
+$dark-gray: #54555a;
+$gray: #c5c6ca;
+$light-gray: #f4f4f4;
+
+.details-product{
+    flex-direction: row;
+    padding-top: 3em;
+
+    font-size: 0.8rem;
+    @media (min-width: 1000px){
+        font-size: 1rem;
+    }    
+    @media (min-width: 1800px){
+        font-size: 1.5rem;
+    }
+
+    @media(max-width: 600px){
+        flex-direction: column;
+    }
+
+    .img,
+    .description{
+        width: 50%;
+
+        @media(max-width: 600px){
+            width: 100%;
+        }
+    }
+
+    .img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4em;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .description{
+        text-align: left;
+
+        h3{
+            font-size: 2em;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .price{
+            font-size: 1.5em;
+        }
+
+        p{
+            font-weight: 300;
+            margin: 3em 0;
+        }
+
+        .card{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            span{
+                font-weight: 500;
+            }
+
+            svg{
+                color: $braun;
+                font-size: 2em;
+                margin: 5px;
+            }
+        }
+    }
+}

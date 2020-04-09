@@ -1,7 +1,7 @@
 const PRODUCTS = [
     {
-        image: '/images/products/desksandtables/table1.png',
-        name: 'Desk&Tables',
+        image: '/images/products/desksAndTables/table1.png',
+        name: 'Desk And Tables',
     },
     {
         image: '/images/products/organizers/organizer1.png',
@@ -12,7 +12,7 @@ const PRODUCTS = [
         name: 'Chairs',
     },
     {
-        image: '/images/products/wallshelves/shelf1.png',
+        image: '/images/products/wallShelves/shelf1.png',
         name: 'Wall Shelves',
     }
 ];

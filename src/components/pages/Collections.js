@@ -2,24 +2,24 @@ import React from 'react';
 import './Collections.scss'
 import Collection from '../UI-details/Collection';
 
-import NEWARRIVALS from '../../shared/collections/newarrivals';
-import DESKSANDTABLES from '../../shared/collections/desksandtables';
+import NEWARRIVALS from '../../shared/collections/newArrivals';
+import DESKSANDTABLES from '../../shared/collections/desksAndTables';
 import CHAIRS from '../../shared/collections/chairs';
 import ORGANIZERS from '../../shared/collections/organizers';
-import WALLSHELVES from '../../shared/collections/wallshelves';
+import WALLSHELVES from '../../shared/collections/wallShelves';
 
 function Collections(props) {
     return(
         <div className="container collections">
-            <Collection name="New Arrivals" collection = {NEWARRIVALS}/>
+            <Collection collection = {NEWARRIVALS}/>
             <div className="hr-line"></div>
-            <Collection name="Desk & Tables" collection = {DESKSANDTABLES}/>
+            <Collection collection = {DESKSANDTABLES}/>
             <div className="hr-line"></div>
-            <Collection name="Chairs" collection = {CHAIRS}/>
+            <Collection collection = {CHAIRS}/>
             <div className="hr-line"></div>
-            <Collection name="Organizers" collection = {ORGANIZERS}/>
+            <Collection collection = {ORGANIZERS}/>
             <div className="hr-line"></div>
-            <Collection name="Wall Shelves" collection = {WALLSHELVES}/>            
+            <Collection collection = {WALLSHELVES}/>            
         </div>
     );
 }
