@@ -4,41 +4,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faSearch, faBookmark, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import {Link} from 'react-router-dom';
 
-function RenderCollection(props) {
-    if(props.index === 0){
-        return (
-            <Link to="/collections" className="allCollections rounded img-center">
-                <img src="/images/inspiration/7.jpg" alt="all collections"></img>
-                <span>GET ALL COLLECTIONS</span>
-                <span>SHOP NOW</span>
-            </Link>
-        )
-    }else if(props.index === 2){
-        return (
-            <div className="someLinks">
-                <div>
-                    <div className="rounded img-center">
-                        <img src="/images/inspiration/11.jpg" alt="all collections"/>
-                    </div>
-                    <div>
-                        <span className="text-underline">Catalog</span>
-                    </div>
-                </div>
-
-                <div>
-                    <div className="rounded img-center">
-                        <img src="/images/inspiration/3.jpg" alt="all collections" />
-                    </div>
-                    <div>
-                        <span className="text-underline">Planning tools</span>
-                    </div>
-                </div>
-            </div>
-        )
-    }else{
-        return null
-    }
-}
 
 function Home(props) {
 
@@ -54,29 +19,63 @@ function Home(props) {
         }
     });
 
-    const products = props.products.map((product, index) => {
+    const sortedProducts = [];
+
+    sortedProducts.push(props.products.find((product) => product.collection === 'Desks & Tables'));
+    sortedProducts.push(props.products.find((product) => product.collection === 'Organizers'));
+    sortedProducts.push(props.products.find((product) => product.collection === 'Chairs'));
+    sortedProducts.push(props.products.find((product) => product.collection === 'Wall Shelves'));
+
+    const products = sortedProducts.map((product, index) => {
         return(
-            <>
-                <div key = {index} className={`product product-${index}`}>
-                    <div className="border rounded"></div>
+            <div key={index} className={`product product-${index}`}>
+                <div className="border rounded"></div>
 
-                    <div className="header">
-                        <h3>{product.name}</h3>
-                        <div>
-                            <span>Collection</span>
-                            <FontAwesomeIcon icon={faChevronRight} />
-                        </div>
-                    </div>
-
-                    <div className="img">
-                        <img src={product.image} alt="product" />
+                <div className="header">
+                    <h3>{product.collection}</h3>
+                    <div>
+                        <span>Collection</span>
+                        <FontAwesomeIcon icon={faChevronRight} />
                     </div>
                 </div>
-            
-                <RenderCollection index = {index} />
-            </>
+
+                <div className="img">
+                    <img src={product.image} alt={product.name} />
+                </div>
+            </div>
         )
-    })
+    });
+
+    const allCollections =
+        <Link key={100} to="/collections" className="allCollections rounded img-center">
+            <img src="/images/inspiration/7.jpg" alt="all collections"></img>
+            <span>GET ALL COLLECTIONS</span>
+            <span>SHOP NOW</span>
+        </Link>;
+
+    const someLinks = 
+        <div key={101} className="someLinks">
+            <div>
+                <div className="rounded img-center">
+                    <img src="/images/inspiration/11.jpg" alt="all collections"/>
+                </div>
+                <div>
+                    <span className="text-underline">Catalog</span>
+                </div>
+            </div>
+
+            <div>
+                <div className="rounded img-center">
+                    <img src="/images/inspiration/3.jpg" alt="all collections" />
+                </div>
+                <div>
+                    <span className="text-underline">Planning tools</span>
+                </div>
+            </div>
+        </div>;
+
+    products.splice(1, 0, allCollections);
+    products.splice(4, 0, someLinks);
 
     return(
         <div className="main-page">

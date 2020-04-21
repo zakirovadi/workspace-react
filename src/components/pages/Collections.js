@@ -2,24 +2,26 @@ import React from 'react';
 import './Collections.scss'
 import Collection from '../UI-details/Collection';
 
-import NEWARRIVALS from '../../shared/collections/newArrivals';
-import DESKSANDTABLES from '../../shared/collections/desksAndTables';
-import CHAIRS from '../../shared/collections/chairs';
-import ORGANIZERS from '../../shared/collections/organizers';
-import WALLSHELVES from '../../shared/collections/wallShelves';
 
 function Collections(props) {
+
+    const newArrivals = props.products.filter((product) => product.newArrivals === true);
+    const deskAndTables = props.products.filter((product) => product.collection === 'Desks & Tables');
+    const chairs = props.products.filter((product) => product.collection === 'Chairs');
+    const organizers = props.products.filter((product) => product.collection === 'Organizers');
+    const wallShelves = props.products.filter((product) => product.collection === 'Wall Shelves');
+
     return(
         <div className="container collections">
-            <Collection collection = {NEWARRIVALS}/>
+            <Collection name="New Arrivals" collection = {newArrivals}/>
             <div className="hr-line"></div>
-            <Collection collection = {DESKSANDTABLES}/>
+            <Collection collection = {deskAndTables}/>
             <div className="hr-line"></div>
-            <Collection collection = {CHAIRS}/>
+            <Collection collection = {chairs}/>
             <div className="hr-line"></div>
-            <Collection collection = {ORGANIZERS}/>
+            <Collection collection = {organizers}/>
             <div className="hr-line"></div>
-            <Collection collection = {WALLSHELVES}/>            
+            <Collection collection = {wallShelves}/>            
         </div>
     );
 }

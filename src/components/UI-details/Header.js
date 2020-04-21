@@ -11,11 +11,8 @@ function MenuRender(){
             <FontAwesomeIcon icon={faThLarge} />
             <ul>
                 <li><Link to="/home">Home</Link></li>
-                <li><Link to="/collections/new-arrivals">New Arrivals</Link></li>
-                <li><Link to="/collections/desksandtables">Desks and Tables</Link></li>
-                <li><Link to="/collections/chairs">Chairs</Link></li>
-                <li><Link to="/collections/organizers">Organizers</Link></li>
-                <li><Link to="/collections/wallshelves">Wall Shelves</Link></li>
+                <li><Link to="/collections">Collections</Link></li>
+                <li><Link to="/inspirations">Inspirations</Link></li>
             </ul>
         </div>
     )
@@ -41,9 +38,9 @@ class Header extends Component {
     render() {
         return(
             <nav>
-                <div className="logo">
+                <Link to='/home' className="logo">
                     <img src={logo} alt="Workplace" />
-                </div>
+                </Link>
     
                 <div className="nav">
                     <div className="search">
@@ -54,7 +51,7 @@ class Header extends Component {
                         <div></div>
                         <div></div>
                     </div>
-                    <div className="user">
+                    <div className="user" onClick={this.props.signIn}>
                         <span className="text-underline">Sign in</span>
                     </div>
                 </div>

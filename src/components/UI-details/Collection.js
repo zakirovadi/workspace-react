@@ -42,9 +42,8 @@ class Collection extends Component {
     render() {
 
         const products = this.state.collection.map((product, index) => {
-            const productLink = (`${product.collection}-${product.name}-${index}`).replace(/\s+/g, '').toLowerCase();
             return (
-                <Link to={`/collections/${productLink}`} className="product" key={index}>
+                <Link to={`collections/${product.id}`} className="product" key={index}>
                     <div className="img">
                         <img src={product.image} alt={product.name} />
                     </div>
@@ -60,7 +59,11 @@ class Collection extends Component {
         return(
             <div className="collection">
                 <div className="name">
-                    <h3>{this.props.collection[0].collection}</h3>
+                    <h3>{
+                        this.props.name
+                            ? this.props.name
+                            : this.props.collection[0].collection
+                        }</h3>
                     <span className="text-underline" onClick={this.handlerNuberProducts}>{this.state.handlerName}</span>
                 </div>
     

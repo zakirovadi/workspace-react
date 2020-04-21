@@ -43,6 +43,16 @@ input:active, input:hover, input:focus, input{
   outline: none;
 }
 
+button{
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 input::placeholder { 
   opacity: 1;
 }
