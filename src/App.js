@@ -39,10 +39,8 @@ class App extends Component {
   render() {
 
     const HomePage = () => {
-      const products = this.state.products.filter((product) => product.mainImage === true);
-
       return(
-        <Home images = {this.state.images} products = {products} />
+        <Home images = {this.state.images} products = {this.state.products.filter((product) => product.mainImage === true)} />
       )
     };
 
@@ -78,11 +76,11 @@ class App extends Component {
         }
 
         <Switch>
-          <Route path='/home' component={HomePage} />
-          <Route exact path='/inspiration' component={Inspiration} />
-          <Route exact path='/collections' component={AllCollections} />
-          <Route path='/collections/:product' component={Product} />
-          <Redirect to="/home" />
+            <Route path='/home' component={HomePage} />
+            <Route exact path='/inspiration' component={Inspiration} />
+            <Route exact path='/collections' component={AllCollections} />
+            <Route path='/collections/:product' component={Product} />
+            <Redirect to="/home" />
         </Switch>
         <Footer />
       </>

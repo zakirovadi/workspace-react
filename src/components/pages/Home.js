@@ -28,7 +28,7 @@ function Home(props) {
 
     const products = sortedProducts.map((product, index) => {
         return(
-            <div key={index} className={`product product-${index}`}>
+            <Link to='/collections' key={index} className={`product product-${index}`}>
                 <div className="border rounded"></div>
 
                 <div className="header">
@@ -42,7 +42,7 @@ function Home(props) {
                 <div className="img">
                     <img src={product.image} alt={product.name} />
                 </div>
-            </div>
+            </Link>
         )
     });
 
